@@ -11,6 +11,9 @@
 # thirdparty
 /thirdparty
 
+# test
+/testmuduo/
+
 # lib
 *.a
 *.bak
