@@ -113,11 +113,13 @@ Server* const Server::AddConnection(Connection* new_conn)
 Server* const Server::SetReadCallback(Connection* new_conn)
 {
     new_conn->SetReadCallback(read_callback_);
+    return this;
 }
 
 Server* const Server::SetWriteCallback(Connection* new_conn)
 {
     new_conn->SetWriteCallback(write_callback_);
+    return this;
 }
 
 Connection* Server::GetMessageConnection() const

@@ -202,6 +202,7 @@ Server* Connection::GetServer() const
 Connection* Connection::SetServer(Server* server)
 {
     server_ = server;
+    return this;
 }
 
 size_t Connection::GetMessageLen() const

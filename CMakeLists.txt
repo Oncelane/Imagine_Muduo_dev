@@ -53,3 +53,17 @@ else()
     add_dependencies(imagine_muduo imagine_tool)
     target_link_libraries(imagine_muduo imagine_tool pthread)
 endif()
+
+
+set(EXECUTABLE_OUTPUT_PATH "${PROJECT_SOURCE_DIR}/testmuduo")
+
+add_executable(
+    test_client
+    ./testmuduo/test_client.cpp
+)
+add_executable(
+    test_server
+    ./testmuduo/test_server.cpp
+)
+target_link_libraries(test_server imagine_muduo)
+target_include_directories(test_server PUBLIC ./include/Imagine_Muduo)
